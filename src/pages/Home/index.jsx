@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import Card from '../../components/Card';
+
 
 export default function Home() {
 
@@ -36,7 +36,7 @@ export default function Home() {
         onPress={() => navigation.navigate('Profile')}
       />
 
-      <Card/>
+      
 
     </View>
   );

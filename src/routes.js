@@ -15,10 +15,15 @@ export default function Routes() {
     return (
         <NavigationContainer>
             <Stack.Navigator>
+            <Stack.Screen name="Profile" component={Profile} />
+            <Stack.Screen name="Register" component={Register} />
+            <Stack.Screen name="Home" component={Home} />
+            
+            
                 <Stack.Screen name="Splash" component={Splash} />
-                <Stack.Screen name="Home" component={Home} />
-                <Stack.Screen name="Register" component={Register} />
-                <Stack.Screen name="Profile" component={Profile} />
+                
+                
+                
                 <Stack.Screen name="UsefulInformations" component={Usefulnformations} />
             </Stack.Navigator>
         </NavigationContainer>
