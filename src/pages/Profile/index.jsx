@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { Avatar } from 'react-native-paper';
-import MyComponent from '../../components/Input';
+import Input from '../../components/Input';
 
 export default function Profile() {
   return (
@@ -12,7 +12,7 @@ export default function Profile() {
 
       <Avatar.Icon icon="account" color="black" style={styles.logo} Text />
       <Text style={styles.anonUser}>Usuário Anônimo</Text>
-      <MyComponent/>
+      <Input/>
 
     </View>
   );
