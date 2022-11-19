@@ -12,10 +12,17 @@ const ButtonComponent = (props) => {
             
 
             buttonStyle={{
-                backgroundColor: 'black',
-                borderWidth: 2,
-                borderColor: 'white',
-                borderRadius: 30,
+                backgroundColor: '#E27396',
+                borderWidth: 0,
+                
+                borderRadius: 60,
+                width: 327,
+                height: 56,
+                shadowOffset : { width: 0, height: 4},
+                shadowOpacity: 0.25,
+                shadowRadius: 4,
+                elevation: 1,
+                blurRadius: 4
                 
             }}
             
