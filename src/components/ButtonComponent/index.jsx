@@ -3,8 +3,11 @@ import { View } from 'react-native';
 import {Feather as Icon} from '@expo/vector-icons'; 
 import { Button } from "@rneui/themed";
 
+
+
+
 const ButtonComponent = (props) => {
-  
+    
     return (
         <View>
 
@@ -12,6 +15,8 @@ const ButtonComponent = (props) => {
             
 
             buttonStyle={{
+                
+                
                 backgroundColor: '#E27396',
                 borderWidth: 0,
                 
@@ -22,7 +27,8 @@ const ButtonComponent = (props) => {
                 shadowOpacity: 0.25,
                 shadowRadius: 4,
                 elevation: 1,
-                blurRadius: 4
+                blurRadius: 4,
+                marginBottom: 50
                 
             }}
             
@@ -35,6 +41,6 @@ const ButtonComponent = (props) => {
     );
   };
 
-
+  
 
 export default ButtonComponent;

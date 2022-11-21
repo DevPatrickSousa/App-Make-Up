@@ -1,49 +1,62 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Card, Avatar, Icon,Button } from '@rneui/themed';
+import { useFonts } from 'expo-font';
 import ButtonComponent from "../../components/ButtonComponent"
 export default function Home() {
-
+  const [loaded] = useFonts({
+    nunito: require('../../assets/fonts/Nunito-VariableFont_wght.ttf'),
+    montserrat: require('../../assets/fonts/Montserrat-VariableFont_wght.ttf'),
+    OpenSans: require('../../assets/fonts/OpenSans-VariableFont_wdth,wght.ttf')
+  });
   const navigation = useNavigation();
 
   return (
     <View style={styles.container}>
       
-      
+      <Image source={require('../../assets/testeIcon.png')}
+        style={styles.logo} 
+      />
 
-      <Card style={styles.card} onPress={() => alert('teste')}>
+      <Card containerStyle={ styles.card } onPress={() => alert('teste')}
+      >
         <Avatar
-          name='face-woman-shimmer'
-          type='MaterialCommunityIcons'
-          color='#517fa4'
-        />
-        <Card.Title>Tutorial de primeira MakeUp</Card.Title>
+    size={32}
+    rounded
+    icon={{ name: "pencil", type: "font-awesome" }}
+    containerStyle={{ backgroundColor: "#9700b9" }}
+    
+  />
+        <Card.Title style={ styles.title }>Tutorial de primeira MakeUp</Card.Title>
 
 
-        <Text style={{ marginBottom: 10 }}>
-          The idea with React Native Elements is more about component
-          structure than actual design.
+        <Text style={styles.text}>
+        Veja como fazer maquiagem
+        passo-a-passo e saiba quais as
+        dicas a seguir para fazer uma
+        maquiagem para a noite e para o dia.
         </Text>
 
         
       </Card>
 
-      <Card onPress={() => alert('teste')}>
-        <Card.Title>Grave seus passos a passos</Card.Title>
+      <Card containerStyle={ styles.card } onPress={() => alert('teste')}>
+        <Card.Title style={ styles.title }>Grave seus passos a passos</Card.Title>
 
 
-        <Text style={{ marginBottom: 10 }}>
+        <Text style={styles.text}>
           The idea with React Native Elements is more about component
           structure than actual design.
         </Text>
 
       </Card>
-
+      
       <p></p>
 
       <ButtonComponent
       title="ATUALIZAR PERFIL"
       left={true}
+      
       />
       
     </View>
@@ -61,11 +74,39 @@ const styles = StyleSheet.create({
   card: {
     width: 327,
     height: 182,
-    backgroundColor: 'red',
+    backgroundColor: '#EA9AB2',
     borderWidth: 1,
-    borderRadius: 30
+    borderRadius: 10,
+    
     
 
-  }
+  },
+  title:{
+    color: "#FFFFFF",
+    fontFamily: 'OpenSans',
+    fontWeight: 700,
+  },
+  text:{
+    color: "#FFFFFF",
+    fontFamily: 'nunito',
+    fontWeight: 400,
+    
+  },
+  logo:{
+      width: 259,
+      height: 259,
+      shadowColor: "#000",
+      shadowOffset: {
+        width: 0,
+        height: 4,
+      },
+      shadowOpacity: 0.09,
+      shadowRadius: 3.45,
+  
+      elevation: 1,
+  
+  
+    }
+  
   
 });
