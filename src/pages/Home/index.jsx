@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { Card, Avatar, Icon,Button } from '@rneui/themed';
+import { Card, Avatar, Icon, Button } from '@rneui/themed';
 import { useFonts } from 'expo-font';
 import ButtonComponent from "../../components/ButtonComponent"
 export default function Home() {
@@ -13,52 +13,60 @@ export default function Home() {
 
   return (
     <View style={styles.container}>
-      
+
       <Image source={require('../../assets/testeIcon.png')}
-        style={styles.logo} 
+        style={styles.logo}
       />
 
-      <Card containerStyle={ styles.card } onPress={() => alert('teste')}
+      <Card containerStyle={styles.card} onPress={() => alert('teste')}
       >
         <Avatar
-    size={32}
-    rounded
-    icon={{ name: "pencil", type: "font-awesome" }}
-    containerStyle={{ backgroundColor: "#9700b9" }}
-    
-  />
-        <Card.Title style={ styles.title }>Tutorial de primeira MakeUp</Card.Title>
+          size={32}
+          rounded
+          icon={{ name: "pencil", type: "font-awesome" }}
+          containerStyle={{ backgroundColor: "#9700b9" }}
+          
+        />
+        <Card.Title style={styles.title}>Tutorial de primeira MakeUp</Card.Title>
 
 
         <Text style={styles.text}>
-        Veja como fazer maquiagem
-        passo-a-passo e saiba quais as
-        dicas a seguir para fazer uma
-        maquiagem para a noite e para o dia.
+          Veja como fazer maquiagem
+          passo-a-passo e saiba quais as
+          dicas a seguir para fazer uma
+          maquiagem para a noite e para o dia.
         </Text>
 
-        
+
       </Card>
 
-      <Card containerStyle={ styles.card } onPress={() => alert('teste')}>
-        <Card.Title style={ styles.title }>Grave seus passos a passos</Card.Title>
+      <Card containerStyle={styles.card} onPress={() => alert('teste')}
+      >
+        <Avatar
+          size={32}
+          rounded
+          icon={{ name: "pencil", type: "font-awesome" }}
+          containerStyle={{ backgroundColor: "#9700b9" }}
+          
+        />
+        <Card.Title style={styles.title}>Grave seus passos a passos</Card.Title>
 
 
         <Text style={styles.text}>
-          The idea with React Native Elements is more about component
-          structure than actual design.
+        Faça você mesmo os passos de como fazer uma Makeup,
+        podendo indicar também se essa maquiagem é para o dia ou para a noite.
         </Text>
 
       </Card>
-      
+
       <p></p>
 
       <ButtonComponent
-      title="ATUALIZAR PERFIL"
-      left={true}
-      
+        title="ATUALIZAR PERFIL"
+        left={true}
+
       />
-      
+
     </View>
   );
 }
@@ -69,7 +77,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#EA9AB2',
     alignItems: 'center',
     justifyContent: 'center',
-    
+
   },
   card: {
     width: 327,
@@ -77,36 +85,36 @@ const styles = StyleSheet.create({
     backgroundColor: '#EA9AB2',
     borderWidth: 1,
     borderRadius: 10,
-    
-    
+
+
 
   },
-  title:{
+  title: {
     color: "#FFFFFF",
     fontFamily: 'OpenSans',
     fontWeight: 700,
   },
-  text:{
+  text: {
     color: "#FFFFFF",
     fontFamily: 'nunito',
     fontWeight: 400,
-    
+
   },
-  logo:{
-      width: 259,
-      height: 259,
-      shadowColor: "#000",
-      shadowOffset: {
-        width: 0,
-        height: 4,
-      },
-      shadowOpacity: 0.09,
-      shadowRadius: 3.45,
-  
-      elevation: 1,
-  
-  
-    }
-  
-  
+  logo: {
+    width: 220,
+    height: 220,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowOpacity: 0.09,
+    shadowRadius: 3.45,
+
+    elevation: 1,
+
+
+  }
+
+
 });
