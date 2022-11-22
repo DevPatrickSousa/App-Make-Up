@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image,TouchableOpacity } from 'react-native';
 import { useNavigation,Link } from '@react-navigation/native';
 import { Card, Avatar, Icon, Button } from '@rneui/themed';
 import { useFonts } from 'expo-font';
@@ -19,7 +19,9 @@ export default function Home() {
       <Image source={require('../../assets/testeIcon.png')}
         style={styles.logo}
       />
+      <TouchableOpacity onPress={() => alert('teste')}>
 
+      
       <Card containerStyle={styles.card} onPress={() => alert('teste')}
       >
         
@@ -30,7 +32,7 @@ export default function Home() {
           containerStyle={{ backgroundColor: "#9700b9" }}
           
         />
-        <Card.Title style={styles.title}><Link to={{ screen: 'Splash' }}>Tutorial de primeira MakeUp</Link></Card.Title>
+        <Card.Title style={styles.title}></Card.Title>
 
 
         <Text style={styles.text}>
@@ -40,11 +42,12 @@ export default function Home() {
           maquiagem para a noite e para o dia.
         </Text>
 
-        <ButtonCardComponent
-        title='Vamos começar'
-        />
-
+        
+       
       </Card>
+      </TouchableOpacity>
+
+      <TouchableOpacity onPress={() => alert('teste')} style={styles.hoverButton}>
 
       <Card containerStyle={styles.card} onPress={() => alert('teste')}
       >
@@ -64,7 +67,8 @@ export default function Home() {
         </Text>
 
       </Card>
-
+      </TouchableOpacity>
+      
       <p></p>
 
       <ButtonComponent
@@ -91,7 +95,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#EA9AB2',
     borderWidth: 1,
     borderRadius: 10,
-
+    
 
 
   },
@@ -121,7 +125,17 @@ const styles = StyleSheet.create({
 
 
   },
+  TouchableOpacity:{
+    cursor:'pointer',
+    width: 327,
+    height: 182,
+    
+  },
+  
   
 
 
 });
+
+
+//<Link to={{ screen: 'Splash' }}>Tutorial de primeira MakeUp</Link>
