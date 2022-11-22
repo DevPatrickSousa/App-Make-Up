@@ -1,8 +1,10 @@
 import { StyleSheet, Text, View, Image } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation,Link } from '@react-navigation/native';
 import { Card, Avatar, Icon, Button } from '@rneui/themed';
 import { useFonts } from 'expo-font';
+
 import ButtonComponent from "../../components/ButtonComponent"
+import ButtonCardComponent from "../../components/ButtonCardComponent"
 export default function Home() {
   const [loaded] = useFonts({
     nunito: require('../../assets/fonts/Nunito-VariableFont_wght.ttf'),
@@ -20,6 +22,7 @@ export default function Home() {
 
       <Card containerStyle={styles.card} onPress={() => alert('teste')}
       >
+        
         <Avatar
           size={32}
           rounded
@@ -27,7 +30,7 @@ export default function Home() {
           containerStyle={{ backgroundColor: "#9700b9" }}
           
         />
-        <Card.Title style={styles.title}>Tutorial de primeira MakeUp</Card.Title>
+        <Card.Title style={styles.title}><Link to={{ screen: 'Splash' }}>Tutorial de primeira MakeUp</Link></Card.Title>
 
 
         <Text style={styles.text}>
@@ -37,6 +40,9 @@ export default function Home() {
           maquiagem para a noite e para o dia.
         </Text>
 
+        <ButtonCardComponent
+        title='Vamos começar'
+        />
 
       </Card>
 
@@ -114,7 +120,8 @@ const styles = StyleSheet.create({
     elevation: 1,
 
 
-  }
+  },
+  
 
 
 });
