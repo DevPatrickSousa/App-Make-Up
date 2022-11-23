@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { Avatar } from 'react-native-paper';
-import InputComponent from '../../components/InputComponent';
+import InputComponent from '../../components/InputComponent/index';
 
 export default function Profile() {
   return (
