@@ -28,7 +28,7 @@ const ButtonComponent = (props) => {
                 shadowRadius: 4,
                 elevation: 1,
                 blurRadius: 4,
-                marginBottom: 50
+                marginBottom: 40
                 
             }}
             
