@@ -1,10 +1,12 @@
+import React from 'react';
+
 import { StyleSheet, Text, View, Image,TouchableOpacity } from 'react-native';
 import { useNavigation,Link } from '@react-navigation/native';
 import { Card, Avatar, Icon, Button } from '@rneui/themed';
 import { useFonts } from 'expo-font';
 
 import ButtonComponent from "../../components/ButtonComponent"
-import ButtonCardComponent from "../../components/ButtonCardComponent"
+
 export default function Home() {
   const [loaded] = useFonts({
     nunito: require('../../assets/fonts/Nunito-VariableFont_wght.ttf'),
@@ -16,13 +18,13 @@ export default function Home() {
   return (
     <View style={styles.container}>
 
+
+
       <Image source={require('../../assets/testeIcon.png')}
         style={styles.logo}
       />
       <TouchableOpacity onPress={() => alert('teste')}>
-
-      
-      <Card containerStyle={styles.card} onPress={() => alert('teste')}
+      <Card containerStyle={styles.card} 
       >
         
         <Avatar
@@ -32,7 +34,7 @@ export default function Home() {
           containerStyle={{ backgroundColor: "#9700b9" }}
           
         />
-        <Card.Title style={styles.title}></Card.Title>
+        <Card.Title style={styles.title}>Tutorial de primeira MakeUp</Card.Title>
 
 
         <Text style={styles.text}>
@@ -126,12 +128,16 @@ const styles = StyleSheet.create({
 
   },
   TouchableOpacity:{
-    cursor:'pointer',
-    width: 327,
-    height: 182,
+    margin: 0,
+    padding: 0
     
   },
-  
+  icon:{
+    flex: 1,
+    alignContent: 'flex-start',
+    justifyContent: 'flex-start',
+    alignItems: 'flex-start'
+  }
   
 
 
