@@ -5,7 +5,7 @@ import { useNavigation,Link } from '@react-navigation/native';
 import { Card, Avatar, Icon, Button } from '@rneui/themed';
 import { useFonts } from 'expo-font';
 
-import ButtonComponent from "../../components/ButtonComponent"
+import ButtonComponent from "../../components/ButtonComponent/index"
 
 export default function Home() {
   const [loaded] = useFonts({
