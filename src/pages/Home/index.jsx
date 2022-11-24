@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { StyleSheet, Text, View, Image,TouchableOpacity } from 'react-native';
-import { useNavigation,Link } from '@react-navigation/native';
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import { useNavigation, Link } from '@react-navigation/native';
 import { Card, Avatar, Icon, Button } from '@rneui/themed';
 import { useFonts } from 'expo-font';
 
@@ -19,58 +19,63 @@ export default function Home() {
     <View style={styles.container}>
 
 
+      <Avatar
+        size={32}
+
+        source={require('../../assets/info.png')}
+        onPress={() => alert('teste')}
+        containerStyle={styles.info}
+      />
+
 
       <Image source={require('../../assets/testeIcon.png')}
         style={styles.logo}
       />
       <TouchableOpacity onPress={() => alert('teste')}>
-      <Card containerStyle={styles.card} 
-      >
-        
-        <Avatar
-          size={32}
-          rounded
-          icon={{ name: "pencil", type: "font-awesome" }}
-          containerStyle={{ backgroundColor: "#9700b9" }}
-          
-        />
-        <Card.Title style={styles.title}>Tutorial de primeira MakeUp</Card.Title>
+        <Card containerStyle={styles.card}
+        >
+
+          <Avatar
+            size={32}
+
+            source={require('../../assets/mascara.png')}
+
+          />
+          <Card.Title style={styles.title}>Tutorial de primeira MakeUp</Card.Title>
 
 
-        <Text style={styles.text}>
-          Veja como fazer maquiagem
-          passo-a-passo e saiba quais as
-          dicas a seguir para fazer uma
-          maquiagem para a noite e para o dia.
-        </Text>
+          <Text style={styles.text}>
+            Veja como fazer maquiagem
+            passo-a-passo e saiba quais as
+            dicas a seguir para fazer uma
+            maquiagem para a noite e para o dia.
+          </Text>
 
-        
-       
-      </Card>
+
+
+        </Card>
       </TouchableOpacity>
 
       <TouchableOpacity onPress={() => alert('teste')} style={styles.hoverButton}>
 
-      <Card containerStyle={styles.card} onPress={() => alert('teste')}
-      >
-        <Avatar
-          size={32}
-          rounded
-          icon={{ name: "pencil", type: "font-awesome" }}
-          containerStyle={{ backgroundColor: "#9700b9" }}
-          
-        />
-        <Card.Title style={styles.title}>Grave seus passos a passos</Card.Title>
+        <Card containerStyle={styles.card} onPress={() => alert('teste')}
+        >
+          <Avatar
+            size={32}
+            source={require('../../assets/powder.png')}
+            iconStyle={styles.powder}
+          />
+          <Card.Title style={styles.title}>Grave seus passos a passos</Card.Title>
 
 
-        <Text style={styles.text}>
-        Faça você mesmo os passos de como fazer uma Makeup,
-        podendo indicar também se essa maquiagem é para o dia ou para a noite.
-        </Text>
+          <Text style={styles.text}>
+            Faça você mesmo os passos de como fazer uma Makeup,
+            podendo indicar também se essa maquiagem é para o dia ou para a noite.
+          </Text>
 
-      </Card>
+        </Card>
       </TouchableOpacity>
-      
+
       <p></p>
 
       <ButtonComponent
@@ -97,7 +102,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#EA9AB2',
     borderWidth: 1,
     borderRadius: 10,
-    
+
 
 
   },
@@ -113,8 +118,8 @@ const styles = StyleSheet.create({
 
   },
   logo: {
-    width: 220,
-    height: 220,
+    width: 194,
+    height: 194,
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
@@ -127,18 +132,28 @@ const styles = StyleSheet.create({
 
 
   },
-  TouchableOpacity:{
+  TouchableOpacity: {
     margin: 0,
     padding: 0
-    
+
   },
-  icon:{
+  icon: {
     flex: 1,
     alignContent: 'flex-start',
     justifyContent: 'flex-start',
     alignItems: 'flex-start'
+  },
+  powder: {
+    marginTop: 10
+  },
+  info:{
+    flex: 1,
+    flexDirection: 'row',
+    alignContent: 'flex-start',
+    justifyContent: 'flex-start',
+    marginRight: 320,
+    top: 5
   }
-  
 
 
 });
