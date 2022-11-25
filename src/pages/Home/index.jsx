@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
-import { useNavigation, Link } from '@react-navigation/native';
+import { useNavigation, Link, useLinkTo } from '@react-navigation/native';
 import { Card, Avatar, Icon, Button } from '@rneui/themed';
 import { useFonts } from 'expo-font';
 
@@ -19,11 +19,13 @@ export default function Home() {
     <View style={styles.container}>
 
 
+
+
       <Avatar
         size={32}
 
         source={require('../../assets/info.png')}
-        onPress={() => alert('teste')}
+        onPress={() => navigation.navigate("Usefulnformations") && console.log('teste')} 
         containerStyle={styles.info}
       />
 
