@@ -15,12 +15,15 @@ export default function UsefulInformations() {
   const [myText, setMyText] = useState("My Original Text");
   const [myText1, setMyText1] = useState("teste");
   
+  function showText(){
+    
+  }
 
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
 
-      <Text style={styles.moreInfo} onPress = {() => setMyText("My Changed Text")&& setMyText1("teste")}>Mais informações</Text>
+      <Text style={styles.moreInfo} onPress = {() => {setMyText("My Changed Text");setMyText1("teste1")}}>Mais informações</Text>
 
       <Text style={styles.text} >{myText}</Text>
       <Card containerStyle={styles.card}>
