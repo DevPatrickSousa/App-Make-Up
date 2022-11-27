@@ -145,9 +145,6 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     alignItems: 'flex-start'
   },
-  powder: {
-    marginTop: 10
-  },
   info:{
     flex: 1,
     flexDirection: 'row',
