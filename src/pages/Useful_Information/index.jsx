@@ -12,20 +12,42 @@ export default function UsefulInformations() {
     OpenSans: require('../../assets/fonts/OpenSans-VariableFont_wdth,wght.ttf')
   });
 
-  const [myText, setMyText] = useState("My Original Text");
-  const [myText1, setMyText1] = useState("teste");
-  
-  function showText(){
-    
+  const [myFirstText, setMyFirstText] = useState("N° de colaboradores para te atender");
+  const [mySecondText, setMySecondText] = useState("N° de tonalidades de pele");
+  const [myThirdText, setMyThirdText] = useState("Departamento de moda");
+  const [myFourthText, setMyFourthText] = useState("Central de atendimento");
+  const [myFifthText, setMyFifthText] = useState("Reclame aqui");
+  const [hideText, setHideText] = useState(false);
+
+  function showMoreInformation() {
+    setMyFirstText("Central de atendimento a mulher");
+    setMySecondText("Polícia militar")
+    setMyThirdText("Bombeiros")
+    setMyFourthText("Defensoria pública")
+    setMyFifthText("Disque denúncia")
+    setHideText(true)
+  }
+  function showLessInformation() {
+    setMyFirstText("N° de colaboradores para te atender");
+    setMySecondText("N° de tonalidades de pele")
+    setMyThirdText("Departamento de moda")
+    setMyFourthText("Central de atendimento")
+    setMyFifthText("Reclame aqui")
+    setHideText(false)
   }
 
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
+      {hideText 
+      ? 
+      <Text style={styles.moreInfo} onPress={showLessInformation}>Menos informações</Text> 
+      :
+      <Text style={styles.moreInfo} onPress={showMoreInformation}>Mais informações</Text>
+      }
 
-      <Text style={styles.moreInfo} onPress = {() => {setMyText("My Changed Text");setMyText1("teste1")}}>Mais informações</Text>
 
-      <Text style={styles.text} >{myText}</Text>
+      <Text style={styles.text} >{myFirstText}</Text>
       <Card containerStyle={styles.card}>
         <Text style={styles.cardContent} h2>
           180
@@ -34,7 +56,7 @@ export default function UsefulInformations() {
 
 
 
-      <Text style={styles.text}>{myText}</Text>
+      <Text style={styles.text}>{mySecondText}</Text>
       <Card containerStyle={styles.card}>
         <Text style={styles.cardContent} h2>
           190
@@ -42,21 +64,21 @@ export default function UsefulInformations() {
       </Card>
 
 
-      <Text style={styles.text}>{myText1}</Text>
+      <Text style={styles.text}>{myThirdText}</Text>
       <Card containerStyle={styles.card}>
         <Text style={styles.cardContent} h2>
           193
         </Text>
       </Card>
 
-      <Text style={styles.text}>Tela info</Text>
+      <Text style={styles.text}>{myFourthText}</Text>
       <Card containerStyle={styles.card}>
         <Text style={styles.cardContent} h2>
           0800 773 4340
         </Text>
       </Card>
 
-      <Text style={styles.text}>Tela info</Text>
+      <Text style={styles.text}>{myFifthText}</Text>
       <Card containerStyle={styles.card}>
         <Text style={styles.cardContent} h2>
           181
@@ -105,11 +127,11 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: 'center',
   },
-  moreInfo:{
+  moreInfo: {
     flex: 1,
     justifyContent: 'flex-start',
-    alignSelf:'flex-start',
-    textAlign:'left',
+    alignSelf: 'flex-start',
+    textAlign: 'left',
     maxHeight: 20,
     color: "#FFFFFF",
     fontFamily: 'Nunito-MediumItalic',
