@@ -1,9 +1,15 @@
+//imports
+
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import { Card, Avatar, Icon, Button } from '@rneui/themed';
+import { Card } from '@rneui/themed';
 import { useFonts } from 'expo-font';
 import React, { useState } from 'react';
+
+
 export default function UsefulInformations() {
+
+  //import fonts
 
   const [loaded] = useFonts({
     nunito: require('../../assets/fonts/Nunito-VariableFont_wght.ttf'),
@@ -12,12 +18,16 @@ export default function UsefulInformations() {
     OpenSans: require('../../assets/fonts/OpenSans-VariableFont_wdth,wght.ttf')
   });
 
+  //declaring hooks - useState
+
   const [myFirstText, setMyFirstText] = useState("N° de colaboradores para te atender");
   const [mySecondText, setMySecondText] = useState("N° de tonalidades de pele");
   const [myThirdText, setMyThirdText] = useState("Departamento de moda");
   const [myFourthText, setMyFourthText] = useState("Central de atendimento");
   const [myFifthText, setMyFifthText] = useState("Reclame aqui");
   const [hideText, setHideText] = useState(false);
+
+  //function to show the SOS numbers.
 
   function showMoreInformation() {
     setMyFirstText("Central de atendimento a mulher");
@@ -27,6 +37,9 @@ export default function UsefulInformations() {
     setMyFifthText("Disque denúncia")
     setHideText(true)
   }
+
+  //function to hide the SOS numbers.
+
   function showLessInformation() {
     setMyFirstText("N° de colaboradores para te atender");
     setMySecondText("N° de tonalidades de pele")
@@ -37,13 +50,16 @@ export default function UsefulInformations() {
   }
 
   return (
+
+    //using the state "hideText" to show/hide the SOS numbers depending on the status true or false.
+
     <View style={styles.container}>
       <StatusBar style="auto" />
-      {hideText 
-      ? 
-      <Text style={styles.moreInfo} onPress={showLessInformation}>Menos informações</Text> 
-      :
-      <Text style={styles.moreInfo} onPress={showMoreInformation}>Mais informações</Text>
+      {hideText
+        ?
+        <Text style={styles.moreInfo} onPress={showLessInformation}>Menos informações</Text>
+        :
+        <Text style={styles.moreInfo} onPress={showMoreInformation}>Mais informações</Text>
       }
 
 
@@ -84,11 +100,6 @@ export default function UsefulInformations() {
           181
         </Text>
       </Card>
-
-
-
-
-
 
 
     </View>

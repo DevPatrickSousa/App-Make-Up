@@ -8,7 +8,7 @@ import Home from './pages/Home';
 import Register from './pages/Register';
 import Profile from './pages/Profile';
 import Usefulnformations from './pages/Useful_Information';
-
+import Laws from './pages/Laws';
 
 const Drawer = createDrawerNavigator();
 
@@ -21,6 +21,7 @@ function MyDrawer() {
       <Drawer.Screen name="Register" component={Register} />
       <Drawer.Screen name="Profile" component={Profile} />
       <Drawer.Screen name="Usefulnformations" component={Usefulnformations} />
+      <Drawer.Screen name="Laws" component={Laws} />
     </Drawer.Navigator>
   );
 }
