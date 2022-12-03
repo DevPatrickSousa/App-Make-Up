@@ -8,16 +8,14 @@ const InputComponent = (props) => {
   return (
     <View>
 
-<Input
-      label=' '
-      placeholder=' '
-      leftIcon={{ type: 'font-awesome', name: 'chevron-left' }}
-      {...props.placeholder}
-    />
-        
-        
-        
-        
+      <Input
+        label={props.label}
+        placeholder={props.placeholder}
+      />
+
+
+
+
 
 
 
