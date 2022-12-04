@@ -1,7 +1,9 @@
+import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { Avatar } from 'react-native-paper';
 import InputComponent from '../../components/InputComponent/index';
+import ButtonComponent from "../../components/ButtonComponent/index";
 
 export default function Profile() {
   return (
@@ -10,20 +12,40 @@ export default function Profile() {
 
       <StatusBar style="auto" />
 
-      <Avatar.Icon icon="account" color="black" style={styles.logo} Text />
-      <div id='userAnon' style={styles.container}>
-        <Text style={styles.anonUser}>Usuário Anônimo</Text>
-      </div>
+      <Avatar.Icon icon="account" color="black" style={styles.logo} />
 
-      
 
-      <div>
-        <InputComponent
-        label='teste'
-        placeholder='teste'
-        />
-      </div>
+      <InputComponent
+        leftIcon={{ type: 'font-awesome', name: 'chevron-left' }}
+        label='Nome'
+        placeholder='Digite o seu nome'
+        
+      />
 
+      <InputComponent
+        label='Idade'
+        placeholder='Digite a sua idade'
+      />
+
+      <InputComponent
+        label='Email'
+        placeholder='Digite o seu email'
+      />
+
+
+      <InputComponent
+        label='Senha'
+        placeholder='Digite a sua senha'
+      />
+
+      <InputComponent
+        label='Tel.:'
+        placeholder='Digite o seu telefone para contato'
+      />
+
+      <ButtonComponent
+        title="Cadastrar Dados"
+      />
 
     </View>
   );
@@ -33,8 +55,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#EA9AB2',
-    flexDirection: 'row',
-    textAlign: 'center'
+    textAlign: 'center',
+    justifyContent: 'center',
+    alignContent: 'center',
+    
   },
   logo: {
     backgroundColor: "#FFF",
@@ -42,14 +66,15 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 1, height: 1 },
     shadowOpacity: 0.8,
     shadowRadius: 8,
-  },
-  anonUser: {
-    flex: 1,
-    justifyContent: 'center',
-    alignContent: 'center',
-    textAlign: 'center',
+    marginHorizontal: 5,
+    marginVertical: 10,
+
   },
   
+  
+  
+
+
 });
 
 
