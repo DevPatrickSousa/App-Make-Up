@@ -16,8 +16,8 @@ function MyDrawer() {
   return (
     <Drawer.Navigator>
       
-      <Drawer.Screen name="Profile" component={Profile} />
       <Drawer.Screen name="Home" component={Home} />
+      <Drawer.Screen name="Profile" component={Profile} />
       <Drawer.Screen name="Splash" component={Splash} />
       <Drawer.Screen name="Register" component={Register} />
       <Drawer.Screen name="Usefulnformations" component={Usefulnformations} />
