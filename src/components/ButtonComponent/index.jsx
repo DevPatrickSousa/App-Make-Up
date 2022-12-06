@@ -28,8 +28,8 @@ const ButtonComponent = (props) => {
                 shadowRadius: 4,
                 elevation: 1,
                 blurRadius: 4,
-                marginBottom: 40
-                
+                marginBottom: 40,
+                textTransform:'uppercase'
             }}
             
             >{props.left &&(<Icon name="arrow-left" color="white" />)}

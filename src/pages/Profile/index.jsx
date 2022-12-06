@@ -42,9 +42,10 @@ export default function Profile() {
         label='Tel.:'
         placeholder='Digite o seu telefone para contato'
       />
-
+      
       <ButtonComponent
-        title="Cadastrar Dados"
+        title="Salvar Dados"
+        
       />
 
     </View>
@@ -58,7 +59,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     justifyContent: 'center',
     alignContent: 'center',
-    
+    alignItems: 'center'
   },
   logo: {
     backgroundColor: "#FFF",
@@ -70,6 +71,7 @@ const styles = StyleSheet.create({
     marginVertical: 10,
 
   },
+  
   
   
   
