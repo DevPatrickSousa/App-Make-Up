@@ -7,35 +7,36 @@ import Splash from './pages/Splash';
 import Home from './pages/Home';
 import Register from './pages/Register';
 import Profile from './pages/Profile';
-import Usefulnformations from './pages/Useful_Information';
+import UsefulInformations from './pages/Useful_Information';
 import Laws from './pages/Laws';
-
+import EmergencyContacts from "./pages/emergency_Contacts";
 const Drawer = createDrawerNavigator();
 
 function MyDrawer() {
   return (
     <Drawer.Navigator>
-      
+
       <Drawer.Screen name="Home" component={Home} />
       <Drawer.Screen name="Profile" component={Profile} />
       <Drawer.Screen name="Splash" component={Splash} />
       <Drawer.Screen name="Register" component={Register} />
-      <Drawer.Screen name="Usefulnformations" component={Usefulnformations} />
+      <Drawer.Screen name="Usefulnformations" component={UsefulInformations} />
       <Drawer.Screen name="Laws" component={Laws} />
+      <Drawer.Screen name="EmergencyContacts" component={EmergencyContacts} options={{ drawerItemStyle: { display: "none" } }} />
     </Drawer.Navigator>
   );
 }
 
 export default function App() {
-    return (
-      <NavigationContainer>
-        <MyDrawer />
-      </NavigationContainer>
-    );
-  }
+  return (
+    <NavigationContainer>
+      <MyDrawer />
+    </NavigationContainer>
+  );
+}
 
 
-//import Navigation from "./pages/navigation";  
+//import Navigation from "./pages/navigation";
 
 //<Drawer.Screen name="Navigation" component={Navigation} />
 
@@ -45,19 +46,19 @@ export default function App() {
 
 //export default function Routes() {
     //return (
-        /*<NavigationContainer>
-            <Stack.Navigator>
+/*<NavigationContainer>
+    <Stack.Navigator>
 
-                <Stack.Screen name="Navigation" component={Navigation} />
-                <Stack.Screen name="Home" component={Home} />
-                <Stack.Screen name="Profile" component={Profile} />
-                <Stack.Screen name="Register" component={Register} />
-                <Stack.Screen name="Splash" component={Splash} />
-                <Stack.Screen name="UsefulInformations" component={Usefulnformations} />
+        <Stack.Screen name="Navigation" component={Navigation} />
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Profile" component={Profile} />
+        <Stack.Screen name="Register" component={Register} />
+        <Stack.Screen name="Splash" component={Splash} />
+        <Stack.Screen name="UsefulInformations" component={Usefulnformations} />
 
-            </Stack.Navigator>
-        </NavigationContainer>
- 
+    </Stack.Navigator>
+</NavigationContainer>
+
 */
 
 

@@ -7,12 +7,11 @@ import { Button } from "@rneui/themed";
 
 
 const ButtonComponent = (props) => {
-    
     return (
         <View>
 
-        <Button onPress={() => alert('teste')}
-            
+        <Button 
+            onPress={() => navigation.navigate('Profile')}
 
             buttonStyle={{
                 
