@@ -33,7 +33,7 @@ export default function Home() {
       <Image source={require('../../assets/testeIcon.png')}
         style={styles.logo}
       />
-      <TouchableOpacity onPress={() => alert('teste')}>
+      <TouchableOpacity onPress={() => navigation.navigate('EmergencyContacts')}>
         <Card containerStyle={styles.card}
         >
 
@@ -80,10 +80,11 @@ export default function Home() {
 
       <p></p>
 
+      
       <ButtonComponent
         title="ATUALIZAR PERFIL"
         left={true}
-
+        
       />
 
       
