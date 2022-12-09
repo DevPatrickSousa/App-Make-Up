@@ -1,6 +1,6 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { Avatar } from 'react-native-paper';
 import InputComponent from '../../components/InputComponent/index';
 import ButtonComponent from "../../components/ButtonComponent/index";
@@ -19,14 +19,14 @@ export default function EmergencyContacts() {
         leftIcon={{ type: 'font-awesome', name: 'chevron-left' }}
         label='Nome'
         placeholder='Digite o seu nome'
-        
+
       />
 
       <InputComponent
         label='Tel.:'
         placeholder='Digite o seu telefone para contato'
       />
-      
+
       <ButtonComponent
         title="Contato 1"
         right={true}
@@ -35,6 +35,8 @@ export default function EmergencyContacts() {
     </View>
   );
 }
+
+//styling the emergency_Contacts page.
 
 const styles = StyleSheet.create({
   container: {
@@ -55,10 +57,10 @@ const styles = StyleSheet.create({
     marginVertical: 10,
 
   },
-  
-  
-  
-  
+
+
+
+
 
 
 });

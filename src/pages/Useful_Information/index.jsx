@@ -106,6 +106,8 @@ export default function UsefulInformations() {
   );
 }
 
+//styling Useful_Information page.
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,

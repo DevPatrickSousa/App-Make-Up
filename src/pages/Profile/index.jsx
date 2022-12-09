@@ -1,3 +1,5 @@
+//imports
+
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
@@ -6,6 +8,12 @@ import InputComponent from '../../components/InputComponent/index';
 import ButtonComponent from "../../components/ButtonComponent/index";
 
 export default function Profile() {
+
+  //declaring function to update people data.
+
+  function UpdatingData() {
+    alert('teste')
+  }
   return (
     <View style={styles.container}>
 
@@ -45,12 +53,14 @@ export default function Profile() {
       
       <ButtonComponent
         title="Salvar Dados"
-        
+        onPress={UpdatingData} // when the button is clicked, the data updates in the data base.
       />
 
     </View>
   );
 }
+
+//styling Profile page.
 
 const styles = StyleSheet.create({
   container: {

@@ -22,7 +22,7 @@ export default function Laws() {
 
     return (
 
-
+        //creating cards with laws.
 
         <View style={styles.container}>
             <StatusBar style="auto" />
@@ -59,6 +59,9 @@ export default function Laws() {
         </View>
     );
 }
+
+
+//styling Laws page.
 
 const styles = StyleSheet.create({
     container: {
