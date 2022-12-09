@@ -34,8 +34,10 @@ export default function Register() {
 
 
       <InputComponent
+        
         label='Senha'
         placeholder='Digite a sua senha'
+        
       />
 
       <InputComponent
