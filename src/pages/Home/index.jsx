@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
-import { useNavigation, Link, useLinkTo } from '@react-navigation/native';
-import { Card, Avatar, Icon, Button } from '@rneui/themed';
+import { useNavigation } from '@react-navigation/native';
+import { Card, Avatar } from '@rneui/themed';
 import { useFonts } from 'expo-font';
 
 import ButtonComponent from "../../components/ButtonComponent/index"
@@ -14,18 +14,18 @@ export default function Home() {
     OpenSans: require('../../assets/fonts/OpenSans-VariableFont_wdth,wght.ttf')
   });
   const navigation = useNavigation();
-
+  function goToProfilePage() {
+    navigation.navigate('Profile')
+  }
   return (
     <View style={styles.container}>
 
 
 
-
       <Avatar
         size={32}
-
         source={require('../../assets/info.png')}
-        onPress={() => navigation.navigate("Usefulnformations") && console.log('teste')} 
+        onPress={() => navigation.navigate("Usefulnformations") && console.log('teste')}
         containerStyle={styles.info}
       />
 
@@ -80,18 +80,19 @@ export default function Home() {
 
       <p></p>
 
-      
+
       <ButtonComponent
         title="ATUALIZAR PERFIL"
-        left={true}
-        
+        onPress={goToProfilePage} // when the button is clicked, the page is switched to Profile page.
       />
 
-      
+
 
     </View>
   );
 }
+
+//styling Home page.
 
 const styles = StyleSheet.create({
   container: {
@@ -107,9 +108,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#EA9AB2',
     borderWidth: 1,
     borderRadius: 10,
-
-
-
   },
   title: {
     color: "#FFFFFF",
@@ -120,7 +118,6 @@ const styles = StyleSheet.create({
     color: "#FFFFFF",
     fontFamily: 'nunito',
     fontWeight: 400,
-
   },
   logo: {
     width: 194,
@@ -132,15 +129,11 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.09,
     shadowRadius: 3.45,
-
     elevation: 1,
-
-
   },
   TouchableOpacity: {
     margin: 0,
     padding: 0
-
   },
   icon: {
     flex: 1,
@@ -148,7 +141,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     alignItems: 'flex-start'
   },
-  info:{
+  info: {
     flex: 1,
     flexDirection: 'row',
     alignContent: 'flex-start',
@@ -161,4 +154,3 @@ const styles = StyleSheet.create({
 });
 
 
-//<Link to={{ screen: 'Splash' }}>Tutorial de primeira MakeUp</Link>

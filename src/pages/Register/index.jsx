@@ -6,6 +6,12 @@ import InputComponent from '../../components/InputComponent/index';
 import ButtonComponent from "../../components/ButtonComponent/index";
 
 export default function Register() {
+
+  //declaring function to register people data.
+
+  function Register() {
+    alert('teste')
+  }
   return (
     <View style={styles.container}>
 
@@ -19,7 +25,7 @@ export default function Register() {
         leftIcon={{ type: 'font-awesome', name: 'chevron-left' }}
         label='Nome'
         placeholder='Digite o seu nome'
-        
+
       />
 
       <InputComponent
@@ -42,15 +48,18 @@ export default function Register() {
         label='Tel.:'
         placeholder='Digite o seu telefone para contato'
       />
-      
+
       <ButtonComponent
         title="Cadastrar Dados"
-        
+        onPress={Register} // when the button is clicked, data is registered in the data base.
+
       />
 
     </View>
   );
 }
+
+//styling Register page.
 
 const styles = StyleSheet.create({
   container: {
@@ -71,10 +80,10 @@ const styles = StyleSheet.create({
     marginVertical: 10,
 
   },
-  
-  
-  
-  
+
+
+
+
 
 
 });

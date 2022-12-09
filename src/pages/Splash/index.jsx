@@ -1,8 +1,12 @@
+//imports
+
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import { useFonts } from 'expo-font';
 
 export default function Splash() {
+
+  //declaring const to import and use the fonts.
   const [loaded] = useFonts({
     nunito: require('../../assets/fonts/Nunito-VariableFont_wght.ttf'),
     montserrat: require('../../assets/fonts/Montserrat-VariableFont_wght.ttf')
@@ -11,7 +15,7 @@ export default function Splash() {
 
   return (
 
-
+   
 
     <View style={styles.container}>
       <StatusBar style="auto" />
@@ -20,13 +24,15 @@ export default function Splash() {
       <Text style={styles.makeUp}>Makeup</Text>
 
       <Image source={require('../../assets/testeIcon.png')}
-        style={styles.logo} />
+        style={styles.logo} /> 
 
       <Text style={styles.santanaParnaiba}>Santana de Parnaíba</Text>
       <Text style={styles.saoPaulo}>São Paulo</Text>
     </View>
   );
 }
+
+//styling Splash page.
 
 const styles = StyleSheet.create({
   container: {
@@ -37,7 +43,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     textAlign: 'center',
-
   },
   minha: {
     fontFamily: 'Montserrat',
@@ -47,9 +52,6 @@ const styles = StyleSheet.create({
     color: '#EFCFE3',
     textShadowColor: '#0000', textShadowOffset: { width: '0px', height: '4px', blur: '4px' },
     opacity: 0.98
-
-
-
   },
   makeUp: {
     fontFamily: 'nunito',
@@ -73,7 +75,6 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: '#FFFF',
     lineHeight: 30,
-
   },
   line: {
     color: '#EAF2D7',
@@ -91,9 +92,6 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.09,
     shadowRadius: 3.45,
-
     elevation: 1,
-
-
   }
 });

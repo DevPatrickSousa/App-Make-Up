@@ -11,7 +11,7 @@ const ButtonComponent = (props) => {
         <View>
 
         <Button 
-            onPress={() => navigation.navigate('Profile')}
+            onPress={props.onPress}
 
             buttonStyle={{
                 
