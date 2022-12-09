@@ -43,7 +43,7 @@ const InputComponent = (props) => {
 
         label={props.label}
         placeholder={props.placeholder}
-
+        secureTextEntry={props.secureTextEntry={}}
       />
 
 

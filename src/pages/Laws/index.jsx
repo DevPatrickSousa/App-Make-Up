@@ -53,6 +53,8 @@ export default function Laws() {
                 </Text>
             </Card>
 
+            
+
 
 
 
@@ -69,12 +71,13 @@ const styles = StyleSheet.create({
         backgroundColor: '#EA9AB2',
         alignItems: 'center',
         justifyContent: 'space-evenly',
-
+        width:'100%',
+        height:'100%'
     },
     card: {
         flex: 1,
-        width: 327,
-        height: 182,
+        Width: 327,
+        Height: 182,
         backgroundColor: '#EA9AB2',
         borderWidth: 2,
         borderRadius: 30,
