@@ -9,7 +9,8 @@ const InputComponent = (props) => {
   return (
     <View>
 
-      <Input
+      <Input 
+        
         inputContainerStyle={{
           flex: 1,
           flexDirection: 'column',
@@ -39,11 +40,11 @@ const InputComponent = (props) => {
 
         }}
 
-
-
+        
+        
         label={props.label}
         placeholder={props.placeholder}
-        secureTextEntry={props.secureTextEntry={}}
+        onChange={props.onChange}
       />
 
 

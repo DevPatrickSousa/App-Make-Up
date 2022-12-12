@@ -7,7 +7,7 @@ import { Avatar } from 'react-native-paper';
 import InputComponent from '../../components/InputComponent/index';
 import ButtonComponent from "../../components/ButtonComponent/index";
 
-export default function Profile() {
+export default function Login() {
 
   //declaring function to Update people data.
 
@@ -23,18 +23,7 @@ export default function Profile() {
       <Avatar.Icon icon="account" color="black" style={styles.logo} />
 
 
-      <InputComponent
-        leftIcon={{ type: 'font-awesome', name: 'chevron-left' }}
-        label='Nome'
-        placeholder='Digite o seu nome'
-
-      />
-
-      <InputComponent
-        label='Idade'
-        placeholder='Digite a sua idade'
-      />
-
+      
       <InputComponent
         label='Email'
         placeholder='Digite o seu email'
@@ -48,13 +37,8 @@ export default function Profile() {
         
       />
 
-      <InputComponent
-        label='Tel.:'
-        placeholder='Digite o seu telefone para contato'
-      />
-
       <ButtonComponent
-        title="Salvar Dados"
+        title="Efetuar login"
         onPress={UpdatingData } // when the button is clicked, the data updates in the data base.
 
       />

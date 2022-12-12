@@ -4,7 +4,8 @@ import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Card, Avatar } from '@rneui/themed';
 import { useFonts } from 'expo-font';
-
+import api from '../../Services/api'
+import axios from 'axios'
 import ButtonComponent from "../../components/ButtonComponent/index"
 
 export default function Home() {
@@ -15,8 +16,24 @@ export default function Home() {
   });
   const navigation = useNavigation();
   function goToProfilePage() {
-    navigation.navigate('Profile')
+    navigation.navigate('Profile');
+    
+
   }
+
+  async function testeAPI() {
+    
+    try {
+      const res = await api.get('/');
+      console.log(res)
+    } catch (error) {
+      console.error(error)
+    }
+
+  }
+
+
+  
   return (
     <View style={styles.container}>
 
@@ -83,7 +100,7 @@ export default function Home() {
 
       <ButtonComponent
         title="ATUALIZAR PERFIL"
-        onPress={goToProfilePage} // when the button is clicked, the page is switched to Profile page.
+        onPress={()=>{goToProfilePage();testeAPI();}} // when the button is clicked, the page is switched to Profile page.
       />
 
 
